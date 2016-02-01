@@ -30,8 +30,8 @@ int main() {
 	For_each is a function template, the compiler generates code at compile time.
 	F() makes instance of the functor which gets destroyed when for_each finishes.
 	You could make an instance of F f; and use that without the brackets if you wanted
-	to access the struct again for some reason.
-	std::for_each(v.begin(), v.end(), f;
+	to access the struct again for any reason.
+	std::for_each(v.begin(), v.end(), f);
 	*/
 }
 
