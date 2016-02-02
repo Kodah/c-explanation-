@@ -11,10 +11,10 @@ int main() {
 
 	std::for_each(v.begin(), v.end(), F());
 	/*
-	The third parameter of the for_each algorithm can be any callable object. 
-	Every iterator in the vector is dereferenced and passed to the callable object as a parameter 
+	The third parameter of the for_each algorithm can be function pointer or a move constructible function object.
+	Every iterator in the vector is dereferenced and passed to the function as a parameter 
 	You could have a inline lambda if you wanted [](int x) -> void {std::cout << x; }
-	It must match the signature required by for_each, one parameter.
+	It must match the signature required by for_each, so a Unary function
 	otherwise you will get an error like 'no matching overloaded function found'.
 	 */
 
@@ -28,10 +28,12 @@ int main() {
 	}
 	/*
 	For_each is a function template, the compiler generates code at compile time.
-	F() makes instance of the functor which gets destroyed when for_each finishes.
+	F() makes instance of the functor which gets destroyed when for_each finishes. 
 	You could make an instance of F f; and use that without the brackets if you wanted
 	to access the struct again for any reason.
 	std::for_each(v.begin(), v.end(), f);
 	*/
+	
+	// random notes R-value? deep copy? -.-
 }
 
