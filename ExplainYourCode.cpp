@@ -1,4 +1,5 @@
-// This is a functor that overrides the function call () operator 
+// This is a struct that overrides the function call () operator
+// So its a FUNctor..
 struct F {
 	void operator() (int x)	{
 		// do something
