@@ -32,6 +32,7 @@ int main() {
 	You could make an instance of F f; and use that without the brackets if you wanted
 	to access the struct again for any reason.
 	std::for_each(v.begin(), v.end(), f);
+	edit For_each returns a copy of f when it has finished.
 	*/
 	
 	// random notes R-value? deep copy? -.-
